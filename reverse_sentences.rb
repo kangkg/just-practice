@@ -16,29 +16,23 @@ def reverse_word(word)
 end
 
 def reverse_sentence(given_sentence)
-  
-  
+  return nil if given_sentence.nil?
+  new_sentence = ""
+  counter = 0
+  until counter >= given_sentence.length
+    new_sentence << reverse_word(given_sentence[counter])
+  end
+  new_sentence
 end
 ####
 
 
 ################### matt's code ###
-def reverse_word_2(word)
-  i = 0 
-  temp = ''
-  while i < word.length/2
-    temp = word[i]
-    word[i] = word[-1-i]
-    word[-1-i] = temp
-    i += 1
-  end
-  word
-end
+reverse_sentence(given_sentence)
 
 
 
-
-### some benchmarks! ####
+### some benchmarks of word! ####
 test_word = 'testword'
 
 n = 500000
