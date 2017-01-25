@@ -1,4 +1,5 @@
 # Classic bubble-sort!
+# The code could be further optimized. Currently O(n^2)
 
 def bubble_sort(given_array)
   return nil if given_array.nil?
@@ -10,7 +11,8 @@ def bubble_sort(given_array)
     until counter >= new_array.length - 1
       if new_array[counter] > new_array[counter + 1]
         current_number = new_array[counter] 
-        next_number = new_array[counter + 1] 
+        next_number = new_array[counter + 1]
+        return nil if !(current_number.is_a? Numeric) || !(next_number.is_a? Numeric) # random error checking
         new_array[counter] = next_number
         new_array[counter + 1] = current_number
           # puts new_array[counter].to_s + " " + new_array[counter+1].to_s
@@ -18,9 +20,9 @@ def bubble_sort(given_array)
       end
       counter += 1
     end
-
   end
   p new_array
+  new_array
 end
 
 bubble_sort([5,4,3,2,1]) # correct
