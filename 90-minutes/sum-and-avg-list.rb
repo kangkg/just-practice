@@ -18,6 +18,4 @@ def sum_and_avg(given_array)
   puts "Avg is: #{avg}"
 end
 
-
-
 sum_and_avg([1,2,3,4,5]) #correct
